@@ -28,7 +28,7 @@ const ForeCast = ({ data }) => {
       <Accordion allowZeroExpanded>
         {data.list.splice(0, 7).map((item, index) => {
           {console.log(item.main.pressure)}
-          <AccordionItem key={index}>
+          return <AccordionItem key={index}>
             <AccordionItemHeading>
               <AccordionItemButton>
                 <div className="daily-item">
