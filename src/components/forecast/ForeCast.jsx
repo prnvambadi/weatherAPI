@@ -28,21 +28,11 @@ const ForeCast = ({ data }) => {
       <Accordion allowZeroExpanded>
         {data.list.splice(0, 7).map((item, index) => {
           {console.log(item.main.pressure)}
-          <AccordionItem key={index}>
+              return <AccordionItem key={index}>
             <AccordionItemHeading>
               <AccordionItemButton>
                 <div className="daily-item">
-                  <img
-                    alt="weather"
-                    className="icon-small"
-                    src={`imgs/${item.weather[0].icon}.png`}
-                  />
-                  {console.log(item.weather[0].icon)}
-                  <img
-                    src={`imgs/${item.weather[0].icon}.png`}
-                    className="icon-small"
-                    alt="weather"
-                  />
+                <img src={`imgs/${item.weather[0].icon}.png`} className="icon-small" alt="weather" />
                   <label className="day">{forecastDays[index]}</label>
                   <label className="description">
                     {item.weather[0].description}
